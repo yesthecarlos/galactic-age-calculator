@@ -26,6 +26,14 @@ export default class AgeChart {
   }
 
   lifeExpectancy() {
+    let userAge = this.earth
+    let userExpectancy = 100
+
+    this.expectancy.push(userExpectancy - userAge);
+    this.expectancy.push(userExpectancy.convertToMercury() - userAge.convertToMercury());
+    this.expectancy.push(userExpectancy.convertToVenus() - userAge.convertToVenus());
+    this.expectancy.push(userExpectancy.convertToMars() - userAge.convertToMars());
+    this.expectancy.push(userExpectancy.convertToJupiter() - userAge.convertToJupiter());
 
   }
 }
