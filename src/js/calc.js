@@ -18,6 +18,6 @@ export default class AgeChart {
   }
 
   convertToMars() {
-    
+  this.mars = this.earth * 1.88
   }
 }
