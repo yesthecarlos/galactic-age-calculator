@@ -16,4 +16,8 @@ export default class AgeChart {
   convertToVenus() {
   this.venus = this.earth * .62
   }
+
+  convertToMars() {
+    
+  }
 }

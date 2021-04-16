@@ -18,15 +18,21 @@ describe('AgeChart', () => {
   });
 
   it('should correctly convert Earth age to Mercury age', () => {
-    currentAgeChart.earth = 100
+    currentAgeChart.earth = 100;
     currentAgeChart.convertToMercury();
     expect(currentAgeChart.mercury).toEqual(24);
   });
 
   it('should correctly convert Earth age to Venus age', () => {
-    currentAgeChart.earth = 100
+    currentAgeChart.earth = 100;
     currentAgeChart.convertToVenus();
     expect(currentAgeChart.venus).toEqual(62);
+  });
+
+  it('should correctly convert Earth age to Mars age', () => {
+    currentAgeChart.earth = 100;
+    currentAgeChart.convertToMars();
+    expect(currentAgeChart.mars).toEqual(188);
   })
 
 
