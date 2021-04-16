@@ -10,18 +10,18 @@ export default class AgeChart {
   }
 
   convertToMercury() {
-  this.mercury = this.earth * .24
+  this.mercury = Math.round(this.earth / .24)
   }
 
   convertToVenus() {
-  this.venus = this.earth * .62
+  this.venus = Math.round(this.earth / .62)
   }
 
   convertToMars() {
-  this.mars = this.earth * 1.88
+  this.mars = Math.round(this.earth / 1.88)
   }
 
   convertToJupiter() {
-  this.jupiter = this.earth * 11.86
+  this.jupiter = Math.round(this.earth / 11.86)
   }
 }
