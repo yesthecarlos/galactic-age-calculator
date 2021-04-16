@@ -3,6 +3,6 @@ export default function AgeChart(mercury, venus, mars, jupiter, left) {
   this.venus = venus;
   this.mars = mars;
   this.jupiter = jupiter;
-  this.left = left;
+  this.left = {};
 
 }
