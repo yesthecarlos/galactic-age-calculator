@@ -5,7 +5,7 @@ describe('AgeChart', () => {
   let currentAgeChart;
 
   beforeEach(() => {
-    currentAgeChart = new AgeChart(1, 2, 3, 4, 5, 1);
+    currentAgeChart = new AgeChart(1, 2, 3, 4, 5, []);
   });
   
   it('should correctly construct a new chart with 6 attributes', () => {
@@ -14,7 +14,7 @@ describe('AgeChart', () => {
     expect(currentAgeChart.venus).toEqual(3);
     expect(currentAgeChart.mars).toEqual(4);
     expect(currentAgeChart.jupiter).toEqual(5);
-    expect(currentAgeChart.expectency).toEqual(1);
+    expect(currentAgeChart.expectency).toEqual([]);
   });
 
   it('should correctly convert Earth age to Mercury age', () => {
@@ -36,10 +36,16 @@ describe('AgeChart', () => {
   });
 
   it('should correctly convert Earth age to Jupiter age', () => {
-    currentAgeChart.earth = 100
+    currentAgeChart.earth = 100;
     currentAgeChart.convertToJupiter();
     expect(currentAgeChart.jupiter).toEqual(1186);
   })
+
+  // it('should determine how many years a user has left to live on each planet', () => {
+  //   currentAgeChart.earth = 50;
+  //   currentAgeChart.expectency = 100;
+  //   currentAgeChart.lifeExpectancy
+  // })
 
 
 })
