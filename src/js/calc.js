@@ -22,6 +22,6 @@ export default class AgeChart {
   }
 
   convertToJupiter() {
-  
+  this.jupiter = this.earth * 11.86
   }
 }
