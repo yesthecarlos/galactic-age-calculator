@@ -6,7 +6,7 @@ export default class AgeChart {
   this.venus = venus;
   this.mars = mars;
   this.jupiter = jupiter;
-  this.expectency = []
+  this.expectancy = []
   }
 
   convertToMercury() {
@@ -23,5 +23,9 @@ export default class AgeChart {
 
   convertToJupiter() {
   this.jupiter = Math.round(this.earth / 11.86)
+  }
+
+  lifeExpectancy() {
+
   }
 }

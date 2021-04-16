@@ -14,7 +14,7 @@ describe('AgeChart', () => {
     expect(currentAgeChart.venus).toEqual(3);
     expect(currentAgeChart.mars).toEqual(4);
     expect(currentAgeChart.jupiter).toEqual(5);
-    expect(currentAgeChart.expectency).toEqual([]);
+    expect(currentAgeChart.expectancy).toEqual([]);
   });
 
   it('should correctly convert Earth age to Mercury age', () => {
@@ -41,11 +41,10 @@ describe('AgeChart', () => {
     expect(currentAgeChart.jupiter).toEqual(4);
   })
 
-  // it('should determine how many years a user has left to live on each planet', () => {
-  //   currentAgeChart.earth = 50;
-  //   currentAgeChart.expectency = 100;
-  //   currentAgeChart.lifeExpectancy();
-  //   expect(currentAgeChart.expectency).toEqual([50, ])
-  // })
+  it('should determine how many years a user has left to live on each planet', () => {
+    currentAgeChart.earth = 50;
+    currentAgeChart.lifeExpectancy();
+    expect(currentAgeChart.expectancy).toEqual([50, 208, 81, 27, 4])
+  })
 
 })
