@@ -33,6 +33,12 @@ describe('AgeChart', () => {
     currentAgeChart.earth = 100;
     currentAgeChart.convertToMars();
     expect(currentAgeChart.mars).toEqual(188);
+  });
+
+  it('should correctly convert Earth age to Jupiter age', () => {
+    currentAgeChart.earth = 100
+    currentAgeChart.convertToJupiter();
+    expect(currentAgeChart.jupiter).toEqual(1186);
   })
 
 
