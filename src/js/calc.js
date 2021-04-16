@@ -34,10 +34,10 @@ export default class AgeChart {
     let userExpectancy = 100
 
     this.expectancy.push(userExpectancy - userAge);
-    this.expectancy.push(userAge.convertToMercury());
-    this.expectancy.push(userExpectancy.convertToVenus() - userAge.convertToVenus());
-    this.expectancy.push(userExpectancy.convertToMars() - userAge.convertToMars());
-    this.expectancy.push(userExpectancy.convertToJupiter() - userAge.convertToJupiter());
+    this.expectancy.push(Math.round(userExpectancy/.24 - userAge/.24));
+    this.expectancy.push(Math.round(userExpectancy/.62 - userAge/.62));
+    this.expectancy.push(Math.round(userExpectancy/1.88 - userAge/1.88));
+    this.expectancy.push(Math.round(userExpectancy/11.86 - userAge/11.86));
 
   }
 }
