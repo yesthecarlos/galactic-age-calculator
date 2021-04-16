@@ -1,8 +1,15 @@
-export default function AgeChart(mercury, venus, mars, jupiter, left) {
+export default class AgeChart {
+  
+  constructor(earth, mercury, venus, mars, jupiter) {
+  this.earth = earth
   this.mercury = mercury;
   this.venus = venus;
   this.mars = mars;
   this.jupiter = jupiter;
-  this.left = {};
+  this.left = new Object();
+  }
 
+  convertToMercury() {
+  
+  }
 }
