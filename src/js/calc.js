@@ -12,4 +12,8 @@ export default class AgeChart {
   convertToMercury() {
   this.mercury = this.earth * .24
   }
+
+  convertToVenus() {
+    
+  }
 }

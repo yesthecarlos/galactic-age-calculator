@@ -15,7 +15,6 @@ describe('AgeChart', () => {
     expect(currentAgeChart.mars).toEqual(4);
     expect(currentAgeChart.jupiter).toEqual(5);
     expect(currentAgeChart.left).toEqual({});
-
   });
 
   it('should correctly convert Earth age to Mercury age', () => {
@@ -23,4 +22,12 @@ describe('AgeChart', () => {
     currentAgeChart.convertToMercury();
     expect(currentAgeChart.mercury).toEqual(24);
   });
+
+  it('should correctly convert Earth age to Venus age', () => {
+    currentAgeChart.earth = 100
+    currentAgeChart.convertToVenus();
+    expect(currentAgeChart.venus).toEqual(62);
+  })
+
+
 })
