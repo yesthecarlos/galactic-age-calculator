@@ -39,12 +39,12 @@ describe('AgeChart', () => {
     currentAgeChart.earth = 50;
     currentAgeChart.convertToJupiter();
     expect(currentAgeChart.jupiter).toEqual(4);
-  })
+  });
 
   it('should determine how many years a user has left to live on each planet', () => {
     currentAgeChart.earth = 50;
     currentAgeChart.lifeExpectancy();
-    expect(currentAgeChart.expectancy).toEqual([50, 208, 81, 27, 4])
+    expect(currentAgeChart.expectancy).toEqual([50, 208, 81, 27, 4]);
   })
 
 })

@@ -1,43 +1,38 @@
 export default class AgeChart {
   
-  constructor(earth, mercury, venus, mars, jupiter, expectency) {
-  this.earth = earth
-  this.mercury = mercury;
-  this.venus = venus;
-  this.mars = mars;
-  this.jupiter = jupiter;
-  this.expectancy = []
+  constructor(earth, mercury, venus, mars, jupiter, expectancy) {
+    this.earth = earth
+    this.mercury = mercury;
+    this.venus = venus;
+    this.mars = mars;
+    this.jupiter = jupiter;
+    this.expectancy = [];
   }
 
   convertToMercury() {
-  this.mercury = Math.round(this.earth / .24)
-  return this.mercury
+    this.mercury = Math.round(this.earth / .24)
   }
 
   convertToVenus() {
-  this.venus = Math.round(this.earth / .62)
-  return this.venus
+    this.venus = Math.round(this.earth / .62)
   }
 
   convertToMars() {
-  this.mars = Math.round(this.earth / 1.88)
-  return this.mars
+    this.mars = Math.round(this.earth / 1.88)
   }
 
   convertToJupiter() {
-  this.jupiter = Math.round(this.earth / 11.86)
-  return this.jupiter
+    this.jupiter = Math.round(this.earth / 11.86)
   }
 
   lifeExpectancy() {
-    let userAge = this.earth
-    let userExpectancy = 100
+    let userAge = this.earth;
+    let userExpectancy = 100;
 
     this.expectancy.push(userExpectancy - userAge);
     this.expectancy.push(Math.round(userExpectancy/.24 - userAge/.24));
     this.expectancy.push(Math.round(userExpectancy/.62 - userAge/.62));
     this.expectancy.push(Math.round(userExpectancy/1.88 - userAge/1.88));
     this.expectancy.push(Math.round(userExpectancy/11.86 - userAge/11.86));
-
   }
 }
