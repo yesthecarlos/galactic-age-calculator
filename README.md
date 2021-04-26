@@ -8,6 +8,8 @@
 
 * JavaScript
 * Markup
+* Jest
+* Webpack
 
 ## Description
 
@@ -21,7 +23,9 @@ _This project demonstrates TDD and JavaScript environment setup practices. The a
 * _Open Terminal and change the directory to your desired location._
 * _Type_ <code>$ git clone https://github.com/yesthecarlos/galactic-age-calculator.git</code> _and press Enter._
 * _Open the directory in VS Code or your preferred program._
-* _Open index.html in your preferred browser._
+* _Run <code>$npm install</code> to install the required packages and dependencies._
+* _Run <code>$npm run build</code> to build the project._
+* _Run <code>$npm run test</code> to run the jest test suite._
 
 ## Specs
  
@@ -33,15 +37,6 @@ _This project demonstrates TDD and JavaScript environment setup practices. The a
     currentAgeChart = new AgeChart(1, 2, 3, 4, 5, []);
   });
   
-  it('should correctly construct a new chart with 6 attributes', () => {
-    expect(currentAgeChart.earth).toEqual(1);
-    expect(currentAgeChart.mercury).toEqual(2);
-    expect(currentAgeChart.venus).toEqual(3);
-    expect(currentAgeChart.mars).toEqual(4);
-    expect(currentAgeChart.jupiter).toEqual(5);
-    expect(currentAgeChart.expectancy).toEqual([]);
-  });
-
   it('should correctly convert Earth age to Mercury age', () => {
     currentAgeChart.earth = 50;
     currentAgeChart.convertToMercury();

@@ -1,11 +1,11 @@
 export default class AgeChart {
   
-  constructor(earth, mercury, venus, mars, jupiter, expectancy) {
+  constructor(earth) {
     this.earth = earth
-    this.mercury = mercury;
-    this.venus = venus;
-    this.mars = mars;
-    this.jupiter = jupiter;
+    this.mercury = 0;
+    this.venus = 0;
+    this.mars = 0;
+    this.jupiter = 0;
     this.expectancy = [];
   }
 
