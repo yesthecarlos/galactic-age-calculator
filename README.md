@@ -34,7 +34,7 @@ _This project demonstrates TDD and JavaScript environment setup practices. The a
   let currentAgeChart;
 
   beforeEach(() => {
-    currentAgeChart = new AgeChart(50, 0, 0, 0, 0, []);
+    currentAgeChart = new AgeChart(50);
   });
   
   it('should correctly convert Earth age to Mercury age', () => {
@@ -60,6 +60,12 @@ _This project demonstrates TDD and JavaScript environment setup practices. The a
   it('should determine how many years a user has left to live on each planet', () => {
     currentAgeChart.lifeExpectancy();
     expect(currentAgeChart.expectancy).toEqual([50, 208, 81, 27, 4]);
+  });
+  
+  it('should return the number of years the user has lived past the average life expectancy, if applicable', () => {
+    let longevalAgeChart = new AgeChart(120);
+    let borrowedTime = longevalAgeChart.lifeExpectancy();
+    expect(borrowedTime).toEqual([20, 83, 32, 11, 2]);
   })
 
 })
