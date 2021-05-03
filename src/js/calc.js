@@ -28,11 +28,23 @@ export default class AgeChart {
   lifeExpectancy() {
     let userAge = this.earth;
     let userExpectancy = 100;
+    let borrowedTime = [];
 
     this.expectancy.push(userExpectancy - userAge);
     this.expectancy.push(Math.round(userExpectancy/.24 - userAge/.24));
     this.expectancy.push(Math.round(userExpectancy/.62 - userAge/.62));
     this.expectancy.push(Math.round(userExpectancy/1.88 - userAge/1.88));
     this.expectancy.push(Math.round(userExpectancy/11.86 - userAge/11.86));
+
+    this.expectancy.forEach(function(borrowedYear) {
+      if (borrowedYear < 0) {
+       borrowedTime.push(borrowedYear * -1)
+      }
+      else {
+      return borrowedYear
+      }
+    });
+    return borrowedTime
   }
+  
 }
